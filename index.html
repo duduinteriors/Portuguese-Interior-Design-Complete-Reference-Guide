@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portuguese Interior Design — Complete Reference Guide</title>
+<style>
+  /* ── TOKENS ──────────────────────────────────────────────────── */
+  :root {
+    --ink:        #1C1916;
+    --indigo:     #1B3A6B;
+    --indigo-lt:  #2E5499;
+    --indigo-pale:#EAF0FA;
+    --terra:      #B85C2C;
+    --terra-lt:   #F0E3D8;
+    --sand:       #E8D4B0;
+    --sand-lt:    #FAF5EC;
+    --olive:      #5C6E3A;
+    --olive-lt:   #EAF0E0;
+    --gold:       #B8922A;
+    --white:      #FDFAF5;
+    --mid:        #6B6560;
+    --rule:       #D5CBB8;
+    --tile-bg:    #F0EDE6;
+  }
+
+  /* ── RESET ───────────────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: var(--white);
+    color: var(--ink);
+    line-height: 1.6;
+    font-size: 15px;
+  }
+
+  /* ── AZULEJO PATTERN (SVG inline as background) ─────────────── */
+  .tile-stripe {
+    height: 12px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='12'%3E%3Crect width='40' height='12' fill='%231B3A6B'/%3E%3Crect x='1' y='1' width='18' height='10' rx='1' fill='none' stroke='%232E5499' stroke-width='0.5'/%3E%3Crect x='21' y='1' width='18' height='10' rx='1' fill='none' stroke='%232E5499' stroke-width='0.5'/%3E%3Cpath d='M1 6h18M10 1v10' stroke='%23FDFAF5' stroke-width='0.3' opacity='0.3'/%3E%3Cpath d='M21 6h18M30 1v10' stroke='%23FDFAF5' stroke-width='0.3' opacity='0.3'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+  }
+
+  /* ── HEADER ──────────────────────────────────────────────────── */
+  header {
+    background: var(--indigo);
+    color: var(--white);
+    padding: 56px 40px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Crect width='60' height='60' fill='none'/%3E%3Ccircle cx='30' cy='30' r='20' fill='none' stroke='%23FDFAF5' stroke-width='0.4' opacity='0.08'/%3E%3Ccircle cx='30' cy='30' r='10' fill='none' stroke='%23FDFAF5' stroke-width='0.4' opacity='0.08'/%3E%3Cpath d='M10 30h40M30 10v40' stroke='%23FDFAF5' stroke-width='0.4' opacity='0.06'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+  }
+  header .inner { position: relative; max-width: 900px; margin: 0 auto; }
+  header .label {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--sand);
+    margin-bottom: 16px;
+  }
+  header h1 {
+    font-size: clamp(26px, 4vw, 44px);
+    font-weight: normal;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 14px;
+  }
+  header h1 span { color: var(--sand); font-style: italic; }
+  header p {
+    font-size: 14px;
+    color: rgba(253,250,245,0.75);
+    max-width: 560px;
+    font-family: Arial, sans-serif;
+    line-height: 1.65;
+  }
+  header .meta {
+    margin-top: 24px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  header .meta-item {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 4px;
+    padding: 8px 14px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: var(--sand);
+  }
+  header .meta-item strong { display: block; color: var(--white); font-size: 18px; margin-bottom: 2px; }
+
+  /* ── NAV ─────────────────────────────────────────────────────── */
+  nav {
+    background: var(--indigo-lt);
+    border-bottom: 3px solid var(--terra);
+    padding: 0 40px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  nav a {
+    display: inline-block;
+    padding: 14px 18px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--sand);
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -3px;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  nav a:hover { color: var(--white); border-color: var(--sand); }
+
+  /* ── LAYOUT ──────────────────────────────────────────────────── */
+  .page { max-width: 960px; margin: 0 auto; padding: 0 24px 80px; }
+
+  /* ── QUICK REF CALLOUT ───────────────────────────────────────── */
+  .callout {
+    background: var(--indigo-pale);
+    border-left: 4px solid var(--indigo);
+    border-radius: 0 6px 6px 0;
+    padding: 24px 28px;
+    margin: 40px 0;
+  }
+  .callout h2 {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--indigo);
+    margin-bottom: 14px;
+  }
+  .callout ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 8px 24px;
+  }
+  .callout li {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: var(--ink);
+    padding-left: 18px;
+    position: relative;
+  }
+  .callout li::before { content: '◆'; position: absolute; left: 0; color: var(--indigo); font-size: 8px; top: 4px; }
+
+  /* ── SECTION ─────────────────────────────────────────────────── */
+  section { margin: 48px 0; }
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .section-head h2 { font-size: 20px; font-weight: normal; color: var(--indigo); }
+  .section-head .count {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    color: var(--mid);
+    letter-spacing: 0.08em;
+  }
+
+  /* ── FILTER BAR ──────────────────────────────────────────────── */
+  .filter-bar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+    align-items: center;
+  }
+  .filter-bar label {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: var(--mid);
+    margin-right: 4px;
+  }
+  .filter-btn {
+    background: var(--tile-bg);
+    border: 1px solid var(--rule);
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    color: var(--ink);
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .filter-btn:hover, .filter-btn.active { background: var(--indigo); color: var(--white); border-color: var(--indigo); }
+  .search-input {
+    padding: 6px 12px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    outline: none;
+    color: var(--ink);
+    background: var(--white);
+    margin-left: auto;
+  }
+  .search-input:focus { border-color: var(--indigo); }
+
+  /* ── TABLES ──────────────────────────────────────────────────── */
+  .tbl-wrap { overflow-x: auto; border-radius: 6px; border: 1px solid var(--rule); }
+  table { width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; font-size: 13px; }
+  thead th {
+    background: var(--indigo);
+    color: var(--sand);
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+  }
+  thead th:hover { background: var(--indigo-lt); }
+  thead th .sort { opacity: 0.5; margin-left: 4px; }
+  tbody tr { border-bottom: 1px solid var(--rule); transition: background 0.1s; }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: var(--sand-lt); }
+  tbody td { padding: 10px 14px; color: var(--ink); vertical-align: top; line-height: 1.5; }
+  tbody td:first-child { font-weight: bold; color: var(--indigo); }
+  .hidden-row { display: none; }
+
+  /* ── BADGES ──────────────────────────────────────────────────── */
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .badge-traditional { background: var(--terra-lt); color: var(--terra); }
+  .badge-modern      { background: var(--olive-lt); color: var(--olive); }
+  .badge-coastal     { background: var(--indigo-pale); color: var(--indigo); }
+  .badge-rustic      { background: #F3EAD8; color: #7A5C2A; }
+  .badge-moorish     { background: #F0EAF8; color: #5C3A7A; }
+  .badge-high        { background: #FDECEA; color: #C0392B; }
+  .badge-medium      { background: #FFF8E7; color: #B8922A; }
+  .badge-low         { background: var(--olive-lt); color: var(--olive); }
+
+  /* ── COLOR PALETTE ───────────────────────────────────────────── */
+  .palette-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 12px;
+  }
+  .swatch {
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+  }
+  .swatch-color { height: 80px; }
+  .swatch-info { padding: 10px 12px; background: var(--white); }
+  .swatch-info .name { font-size: 12px; font-weight: bold; color: var(--ink); margin-bottom: 3px; }
+  .swatch-info .hex  { font-size: 11px; font-family: monospace; color: var(--mid); }
+  .swatch-info .use  { font-size: 11px; color: var(--mid); margin-top: 4px; line-height: 1.4; }
+
+  /* ── MATERIAL CARDS ──────────────────────────────────────────── */
+  .material-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+  }
+  .mat-card {
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 16px;
+    background: var(--sand-lt);
+  }
+  .mat-card .mat-name { font-size: 14px; font-weight: bold; color: var(--indigo); margin-bottom: 6px; }
+  .mat-card .mat-row { font-family: Arial, sans-serif; font-size: 12px; color: var(--mid); margin-bottom: 4px; }
+  .mat-card .mat-row span { color: var(--ink); }
+
+  /* ── COMPARISON TABLE ────────────────────────────────────────── */
+  .diff-indicator {
+    display: inline-block;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    margin-right: 4px;
+    vertical-align: middle;
+  }
+
+  /* ── FAQ ─────────────────────────────────────────────────────── */
+  .faq-item { border-bottom: 1px solid var(--rule); }
+  .faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 16px 4px;
+    font-size: 14px;
+    font-family: Georgia, serif;
+    color: var(--indigo);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .faq-q:hover { color: var(--terra); }
+  .faq-q .arrow { transition: transform 0.2s; font-size: 12px; color: var(--mid); }
+  .faq-q.open .arrow { transform: rotate(180deg); }
+  .faq-a {
+    display: none;
+    padding: 0 4px 16px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.7;
+  }
+  .faq-a.open { display: block; }
+
+  /* ── FOOTER ──────────────────────────────────────────────────── */
+  footer {
+    background: var(--indigo);
+    color: rgba(253,250,245,0.6);
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    padding: 24px 40px;
+    text-align: center;
+    line-height: 1.8;
+  }
+  footer a { color: var(--sand); }
+
+  /* ── UTILITY ─────────────────────────────────────────────────── */
+  .no-results { padding: 24px; text-align: center; color: var(--mid); font-family: Arial, sans-serif; font-size: 13px; display: none; }
+  @media (max-width: 600px) {
+    header { padding: 36px 20px 32px; }
+    nav { padding: 0 12px; }
+    .page { padding: 0 16px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="tile-stripe"></div>
+
+<header>
+  <div class="inner">
+    <div class="label">Reference Guide · Interior Design</div>
+    <h1>Portuguese Interior Design<br><span>Complete Element Reference</span></h1>
+    <p>A structured lookup for colors, materials, design elements, historical influences, and Mediterranean style comparisons. Use the filter and search controls in each section to navigate.</p>
+    <div class="meta">
+      <div class="meta-item"><strong>18</strong> Design Elements</div>
+      <div class="meta-item"><strong>8</strong> Med. Style Comparisons</div>
+      <div class="meta-item"><strong>10</strong> Core Colors</div>
+      <div class="meta-item"><strong>9</strong> Natural Materials</div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <a href="#quickref">Quick Ref</a>
+  <a href="#elements">Design Elements</a>
+  <a href="#palette">Color Palette</a>
+  <a href="#materials">Materials</a>
+  <a href="#azulejo">Azulejo Tiles</a>
+  <a href="#comparison">Med. Styles</a>
+  <a href="#rooms">By Room</a>
+  <a href="#faq">FAQ</a>
+</nav>
+
+<div class="tile-stripe" style="background-color: var(--terra); height:3px; background-image:none;"></div>
+
+<div class="page">
+
+  <!-- QUICK REF -->
+  <section id="quickref">
+    <div class="callout">
+      <h2>◆ Quick Reference — Key Principles</h2>
+      <ul>
+        <li>Azulejo tiles are the defining signature element</li>
+        <li>Palette: white base + indigo, terracotta, mustard, olive</li>
+        <li>Materials prioritize: limestone, cork, clay, oak, linen</li>
+        <li>Moorish influence: arches, geometric motifs, patterned tile</li>
+        <li>Coastal DNA: sandy neutrals + Atlantic blues + natural fiber</li>
+        <li>Exterior-interior flow via courtyards and arched doorways</li>
+        <li>Handcrafted ceramics used as both décor and functional ware</li>
+        <li>Whitewashed walls reflect light; thick walls regulate temperature</li>
+        <li>Embroidered linens and carved wood appear in bedrooms</li>
+        <li>Rustic: exposed beams, stone walls, terracotta floors</li>
+        <li>Modern interpretation: minimalism layered over heritage materials</li>
+        <li>Philosophy: character over perfection; lived-in, not sterile</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- DESIGN ELEMENTS TABLE -->
+  <section id="elements">
+    <div class="section-head">
+      <h2>Design Elements</h2>
+      <span class="count">18 entries · sortable &amp; filterable</span>
+    </div>
+
+    <div class="filter-bar">
+      <label>Category:</label>
+      <button class="filter-btn active" onclick="filterTable('elem-table', 'data-cat', 'all', this)">All</button>
+      <button class="filter-btn" onclick="filterTable('elem-table', 'data-cat', 'surface', this)">Surface</button>
+      <button class="filter-btn" onclick="filterTable('elem-table', 'data-cat', 'textile', this)">Textile</button>
+      <button class="filter-btn" onclick="filterTable('elem-table', 'data-cat', 'furniture', this)">Furniture</button>
+      <button class="filter-btn" onclick="filterTable('elem-table', 'data-cat', 'architecture', this)">Architecture</button>
+      <button class="filter-btn" onclick="filterTable('elem-table', 'data-cat', 'decor', this)">Décor</button>
+      <input class="search-input" id="elem-search" placeholder="Search elements…" oninput="searchTable('elem-table', this.value)">
+    </div>
+
+    <div class="tbl-wrap">
+      <table id="elem-table">
+        <thead>
+          <tr>
+            <th onclick="sortTable('elem-table',0)">Element <span class="sort">↕</span></th>
+            <th onclick="sortTable('elem-table',1)">Category <span class="sort">↕</span></th>
+            <th onclick="sortTable('elem-table',2)">Style Sub-type <span class="sort">↕</span></th>
+            <th onclick="sortTable('elem-table',3)">Primary Rooms <span class="sort">↕</span></th>
+            <th onclick="sortTable('elem-table',4)">Sourcing <span class="sort">↕</span></th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-cat="surface">
+            <td>Azulejo Tiles</td><td>Surface</td>
+            <td><span class="badge badge-traditional">Traditional</span></td>
+            <td>Kitchen, Bath, Entry, Stair</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td>Blue-and-white ceramic; hand-painted; storytelling motifs. Use as focal point, not full coverage.</td>
+          </tr>
+          <tr data-cat="surface">
+            <td>Whitewashed Walls</td><td>Surface</td>
+            <td><span class="badge badge-traditional">Traditional</span></td>
+            <td>All rooms</td>
+            <td><span class="badge badge-low">Low</span></td>
+            <td>Limewash or mineral paint; reflects light; creates contrast for coloured accents.</td>
+          </tr>
+          <tr data-cat="surface">
+            <td>Textured Plaster</td><td>Surface</td>
+            <td><span class="badge badge-modern">Modern</span></td>
+            <td>Living, Bedroom</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td>Applied in layers; adds tactile warmth without pattern.</td>
+          </tr>
+          <tr data-cat="surface">
+            <td>Terracotta Floors</td><td>Surface</td>
+            <td><span class="badge badge-rustic">Rustic</span></td>
+            <td>Kitchen, Entry, Outdoor</td>
+            <td><span class="badge badge-low">Low</span></td>
+            <td>Unglazed clay tiles; age naturally; cool in summer. Seal to reduce porosity.</td>
+          </tr>
+          <tr data-cat="surface">
+            <td>Limestone Flooring</td><td>Surface</td>
+            <td><span class="badge badge-traditional">Traditional</span></td>
+            <td>All rooms</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td>Warm-toned stone; key material in Alentejo-region homes. Ages gracefully.</td>
+          </tr>
+          <tr data-cat="surface">
+            <td>Restored Wood Floors</td><td>Surface</td>
+            <td><span class="badge badge-modern">Modern</span></td>
+            <td>Living, Bedroom, Apt.</td>
+            <td><span class="badge badge-low">Low</span></td>
+            <td>Reclaimed or refinished; Lisbon apartment staple; pairs with tiled entryways.</td>
+          </tr>
+          <tr data-cat="architecture">
+            <td>Arched Doorways</td><td>Architecture</td>
+            <td><span class="badge badge-moorish">Moorish</span></td>
+            <td>Entry, Courtyard, Hallway</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td>Horseshoe or rounded arch; Moorish heritage; can be freestanding partition alternative.</td>
+          </tr>
+          <tr data-cat="architecture">
+            <td>Central Courtyard</td><td>Architecture</td>
+            <td><span class="badge badge-traditional">Traditional</span></td>
+            <td>Exterior/Interior link</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td>Climate-responsive design; improves ventilation; connects indoor-outdoor flow.</td>
+          </tr>
+          <tr data-cat="architecture">
+            <td>Exposed Ceiling Beams</td><td>Architecture</td>
+            <td><span class="badge badge-rustic">Rustic</span></td>
+            <td>Living, Kitchen, Bedroom</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td>Dark chestnut or oak; structural and decorative. Common in Douro Valley homes.</td>
+          </tr>
+          <tr data-cat="architecture">
+            <td>Stone Walls (exposed)</td><td>Architecture</td>
+            <td><span class="badge badge-rustic">Rustic</span></td>
+            <td>Living, Kitchen</td>
+            <td><span class="badge badge-high">High</span></td>
+            <td>Granite or schist in northern Portugal; adds thermal mass and texture.</td>
+          </tr>
+          <tr data-cat="architecture">
+            <td>Tiled Patio / Loggia</td><td>Architecture</td>
+            <td><span class="badge badge-coastal">Coastal</span></td>
+            <td>Exterior/Interior link</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td>Extends living space outdoors; cement or azulejo tiles; shaded by pergola.</td>
+          </tr>
+          <tr data-cat="furniture">
+            <td>Dark Wood Furniture</td><td>Furniture</td>
+            <td><span class="badge badge-traditional">Traditional</span></td>
+            <td>Living, Dining, Bedroom</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td>Carved chestnut or walnut; heirloom quality; feels collected, not matched.</td>
+          </tr>
+          <tr data-cat="furniture">
+            <td>Carved Wooden Headboard</td><td>Furniture</td>
+            <td><span class="badge badge-traditional">Traditional</span></td>
+            <td>Bedroom</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td>Oak or pine; ornate or simple; often paired with white embroidered linen.</td>
+          </tr>
+          <tr data-cat="furniture">
+            <td>Oversized Seating</td><td>Furniture</td>
+            <td><span class="badge badge-modern">Modern</span></td>
+            <td>Living</td>
+            <td><span class="badge badge-low">Low</span></td>
+            <td>Comfort-first; linen or cotton upholstery in neutral tones. Layered with throws.</td>
+          </tr>
+          <tr data-cat="textile">
+            <td>Embroidered Linens</td><td>Textile</td>
+            <td><span class="badge badge-traditional">Traditional</span></td>
+            <td>Bedroom, Dining</td>
+            <td><span class="badge badge-medium">Medium</span></td>
+            <td>Viana do Castelo embroidery tradition; red-on-white florals; defines bedroom calm.</td>
+          </tr>
+          <tr data-cat="textile">
+            <td>Woven Rugs</td><td>Textile</td>
+            <td><span class="badge badge-rustic">Rustic</span></td>
+            <td>Living, Bedroom</td>
+            <td><span class="badge badge-low">Low</span></td>
+            <td>Arraiolos needlepoint or Alentejo rag-woven; adds warmth to stone/tile floors.</td>
+          </tr>
+          <tr data-cat="textile">
+            <td>Natural Fibre Textiles</td><td>Textile</td>
+            <td><span class="badge badge-coastal">Coastal</span></td>
+            <td>Living, Outdoor</td>
+            <td><span class="badge badge-low">Low</span></td>
+            <td>Jute, rattan, seagrass; coastal DNA; layered with linen curtains.</td>
+          </tr>
+          <tr data-cat="decor">
+            <td>Handmade Ceramics</td><td>Décor</td>
+            <td><span class="badge badge-traditional">Traditional</span></td>
+            <td>Kitchen, Dining, Shelves</td>
+            <td><span class="badge badge-low">Low</span></td>
+            <td>Caldas da Rainha or Barcelos pottery; rustic bowls, plates, vases. Earthy glazes.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="no-results" id="elem-table-noresults">No elements match your filter or search.</div>
+  </section>
+
+  <!-- COLOR PALETTE -->
+  <section id="palette">
+    <div class="section-head">
+      <h2>Color Palette</h2>
+      <span class="count">10 core tones with hex codes and use guidance</span>
+    </div>
+    <div class="palette-grid">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#F5F0E8;"></div>
+        <div class="swatch-info">
+          <div class="name">Whitewash</div>
+          <div class="hex">#F5F0E8</div>
+          <div class="use">Walls, ceilings. Foundation of all sub-styles.</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#1B3A6B;"></div>
+        <div class="swatch-info">
+          <div class="name">Azulejo Indigo</div>
+          <div class="hex">#1B3A6B</div>
+          <div class="use">Tile motifs, accent walls, trim. Signature tone.</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#4A7BAC;"></div>
+        <div class="swatch-info">
+          <div class="name">Atlantic Blue</div>
+          <div class="hex">#4A7BAC</div>
+          <div class="use">Coastal interiors, soft furnishings, ceramics.</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#B85C2C;"></div>
+        <div class="swatch-info">
+          <div class="name">Terracotta</div>
+          <div class="hex">#B85C2C</div>
+          <div class="use">Floor tiles, pots, accent cushions. Warm depth.</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#C9993A;"></div>
+        <div class="swatch-info">
+          <div class="name">Mustard Gold</div>
+          <div class="hex">#C9993A</div>
+          <div class="use">Soft furnishings, lampshades, border tile detail.</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#5C6E3A;"></div>
+        <div class="swatch-info">
+          <div class="name">Olive Green</div>
+          <div class="hex">#5C6E3A</div>
+          <div class="use">Shutters, plant accents, exterior trim.</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#D4A87A;"></div>
+        <div class="swatch-info">
+          <div class="name">Sand Beige</div>
+          <div class="hex">#D4A87A</div>
+          <div class="use">Coastal upholstery, linen curtains, rug base.</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#8C7355;"></div>
+        <div class="swatch-info">
+          <div class="name">Cork Brown</div>
+          <div class="hex">#8C7355</div>
+          <div class="use">Cork tiles, wood furniture, rustic accents.</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#C7A8C0;"></div>
+        <div class="swatch-info">
+          <div class="name">Lavender Dusk</div>
+          <div class="hex">#C7A8C0</div>
+          <div class="use">Moorish-influenced spaces; decorative tile accent.</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#4A4035;"></div>
+        <div class="swatch-info">
+          <div class="name">Dark Chestnut</div>
+          <div class="hex">#4A4035</div>
+          <div class="use">Carved furniture, exposed beams, door frames.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MATERIALS -->
+  <section id="materials">
+    <div class="section-head">
+      <h2>Natural Materials Reference</h2>
+      <span class="count">9 materials · properties and applications</span>
+    </div>
+    <div class="material-grid">
+      <div class="mat-card">
+        <div class="mat-name">Limestone</div>
+        <div class="mat-row">Origin: <span>Alentejo, Sintra</span></div>
+        <div class="mat-row">Uses: <span>Floors, walls, counters</span></div>
+        <div class="mat-row">Tone: <span>Warm cream to grey</span></div>
+        <div class="mat-row">Care: <span>Seal annually; avoid acid cleaners</span></div>
+      </div>
+      <div class="mat-card">
+        <div class="mat-name">Cork</div>
+        <div class="mat-row">Origin: <span>Alentejo (world's largest producer)</span></div>
+        <div class="mat-row">Uses: <span>Flooring, wall tile, insulation</span></div>
+        <div class="mat-row">Tone: <span>Honey to medium brown</span></div>
+        <div class="mat-row">Care: <span>Seal to prevent staining; avoid excess moisture</span></div>
+      </div>
+      <div class="mat-card">
+        <div class="mat-name">Clay / Terracotta</div>
+        <div class="mat-row">Origin: <span>Algarve, Alentejo</span></div>
+        <div class="mat-row">Uses: <span>Tiles, pots, roof</span></div>
+        <div class="mat-row">Tone: <span>Burnt orange to red-brown</span></div>
+        <div class="mat-row">Care: <span>Unsealed is porous; seal for kitchen/bath</span></div>
+      </div>
+      <div class="mat-card">
+        <div class="mat-name">Oak (Chêne)</div>
+        <div class="mat-row">Origin: <span>Douro, Minho regions</span></div>
+        <div class="mat-row">Uses: <span>Beams, floors, furniture</span></div>
+        <div class="mat-row">Tone: <span>Light blonde to dark walnut</span></div>
+        <div class="mat-row">Care: <span>Oil or wax annually</span></div>
+      </div>
+      <div class="mat-card">
+        <div class="mat-name">Schist / Granite</div>
+        <div class="mat-row">Origin: <span>Northern Portugal (Trás-os-Montes)</span></div>
+        <div class="mat-row">Uses: <span>Exposed walls, exterior, paths</span></div>
+        <div class="mat-row">Tone: <span>Grey, charcoal, slate blue</span></div>
+        <div class="mat-row">Care: <span>Minimal; very durable</span></div>
+      </div>
+      <div class="mat-card">
+        <div class="mat-name">Linen</div>
+        <div class="mat-row">Origin: <span>European import; used traditionally</span></div>
+        <div class="mat-row">Uses: <span>Bedding, curtains, tablecloths</span></div>
+        <div class="mat-row">Tone: <span>Natural off-white to flax</span></div>
+        <div class="mat-row">Care: <span>Cold wash; air dry; improve with age</span></div>
+      </div>
+      <div class="mat-card">
+        <div class="mat-name">Ceramic / Faïence</div>
+        <div class="mat-row">Origin: <span>Caldas da Rainha, Barcelos</span></div>
+        <div class="mat-row">Uses: <span>Tiles, tableware, decorative</span></div>
+        <div class="mat-row">Tone: <span>White base + cobalt, terracotta, green</span></div>
+        <div class="mat-row">Care: <span>Dishwasher-safe (most); hand wash for antique</span></div>
+      </div>
+      <div class="mat-card">
+        <div class="mat-name">Jute / Rattan</div>
+        <div class="mat-row">Origin: <span>Imported; coastal tradition</span></div>
+        <div class="mat-row">Uses: <span>Rugs, baskets, furniture</span></div>
+        <div class="mat-row">Tone: <span>Natural tan to golden brown</span></div>
+        <div class="mat-row">Care: <span>Avoid moisture; vacuum; dry brush</span></div>
+      </div>
+      <div class="mat-card">
+        <div class="mat-name">Wrought Iron</div>
+        <div class="mat-row">Origin: <span>Traditional Portuguese craft</span></div>
+        <div class="mat-row">Uses: <span>Light fixtures, railings, door hardware</span></div>
+        <div class="mat-row">Tone: <span>Matte black to dark bronze</span></div>
+        <div class="mat-row">Care: <span>Wax to prevent rust; avoid harsh chemicals</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AZULEJO TILES -->
+  <section id="azulejo">
+    <div class="section-head">
+      <h2>Azulejo Tile Types — Reference</h2>
+      <span class="count">8 styles · origin, era, typical application</span>
+    </div>
+    <div class="tbl-wrap">
+      <table id="azulejo-table">
+        <thead>
+          <tr>
+            <th onclick="sortTable('azulejo-table',0)">Style <span class="sort">↕</span></th>
+            <th onclick="sortTable('azulejo-table',1)">Era <span class="sort">↕</span></th>
+            <th onclick="sortTable('azulejo-table',2)">Colour Palette <span class="sort">↕</span></th>
+            <th onclick="sortTable('azulejo-table',3)">Pattern Type <span class="sort">↕</span></th>
+            <th onclick="sortTable('azulejo-table',4)">Best Application <span class="sort">↕</span></th>
+            <th>Character Note</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hispano-Moresque</td><td>15th c.</td>
+            <td>Cobalt, white, gold</td>
+            <td>Geometric repeat</td>
+            <td>Feature walls, floors</td>
+            <td>Moorish origin; earliest Portuguese azulejo style.</td>
+          </tr>
+          <tr>
+            <td>Dutch-Influenced Blue &amp; White</td><td>17th c.</td>
+            <td>Indigo blue + white</td>
+            <td>Narrative scenes</td>
+            <td>Stairwells, church facades</td>
+            <td>Delft influence; figural scenes, hunting, mythology.</td>
+          </tr>
+          <tr>
+            <td>Grande Figura</td><td>17th–18th c.</td>
+            <td>Blue, white, yellow</td>
+            <td>Large-scale pictorial</td>
+            <td>Palatial interiors, chapels</td>
+            <td>Life-size human figures; tells Biblical or noble stories.</td>
+          </tr>
+          <tr>
+            <td>Pombalino (post-earthquake)</td><td>18th c.</td>
+            <td>Blue-grey + white</td>
+            <td>Standardised repeat</td>
+            <td>Lisbon residential facades</td>
+            <td>Mass production post-1755 earthquake; geometric regularity.</td>
+          </tr>
+          <tr>
+            <td>Romantic Polychrome</td><td>19th c.</td>
+            <td>Blue, yellow, terracotta, green</td>
+            <td>Floral, pastoral</td>
+            <td>Kitchens, dining rooms</td>
+            <td>Industrial production; colourful; widely available today.</td>
+          </tr>
+          <tr>
+            <td>Art Nouveau Azulejo</td><td>Early 20th c.</td>
+            <td>Sea green, lilac, cream</td>
+            <td>Organic curves, flowers</td>
+            <td>Café interiors, residential entry</td>
+            <td>Sinuous floral forms; associated with Porto and Lisbon cafés.</td>
+          </tr>
+          <tr>
+            <td>Hand-Painted Contemporary</td><td>20th c.–now</td>
+            <td>Any</td>
+            <td>Custom / artist-designed</td>
+            <td>Kitchen backsplash, bath</td>
+            <td>Made-to-order; integrates traditional craft with modern briefs.</td>
+          </tr>
+          <tr>
+            <td>Cement Encaustic (inspired)</td><td>19th c.–now</td>
+            <td>Terracotta, indigo, mustard</td>
+            <td>Geometric repeat</td>
+            <td>Entry floors, outdoor patios</td>
+            <td>Not strictly azulejo but shares vocabulary; widely used today.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- MEDITERRANEAN COMPARISON -->
+  <section id="comparison">
+    <div class="section-head">
+      <h2>Mediterranean Style Comparison</h2>
+      <span class="count">8 styles compared across 6 dimensions</span>
+    </div>
+    <p style="font-family:Arial,sans-serif;font-size:13px;color:var(--mid);margin-bottom:16px;">Use this to quickly identify how Portuguese design differs from other Mediterranean and Southern European styles.</p>
+
+    <div class="filter-bar">
+      <input class="search-input" id="comp-search" placeholder="Search styles…" oninput="searchTable('comp-table', this.value)" style="margin-left:0;">
+    </div>
+
+    <div class="tbl-wrap">
+      <table id="comp-table">
+        <thead>
+          <tr>
+            <th onclick="sortTable('comp-table',0)">Style <span class="sort">↕</span></th>
+            <th onclick="sortTable('comp-table',1)">Country <span class="sort">↕</span></th>
+            <th>Signature Element</th>
+            <th>Dominant Palette</th>
+            <th>Key Material</th>
+            <th>Tile Tradition</th>
+            <th>Formality Level</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Portuguese</td><td>Portugal</td>
+            <td>Azulejo blue-and-white tile</td>
+            <td>White, indigo, terracotta, mustard</td>
+            <td>Limestone, cork, ceramic</td>
+            <td>Azulejo (narrative &amp; geometric)</td>
+            <td>Relaxed–Mid</td>
+          </tr>
+          <tr>
+            <td>Spanish</td><td>Spain</td>
+            <td>Talavera tile, wrought iron</td>
+            <td>Bold red, yellow, gold, black</td>
+            <td>Iron, terracotta, wood</td>
+            <td>Talavera (colourful, floral)</td>
+            <td>Mid–Formal</td>
+          </tr>
+          <tr>
+            <td>Greek Island</td><td>Greece</td>
+            <td>Blue domed architecture, stark white</td>
+            <td>Brilliant white + Aegean blue</td>
+            <td>Stucco, whitewash, stone</td>
+            <td>Minimal to none</td>
+            <td>Very Relaxed</td>
+          </tr>
+          <tr>
+            <td>Italian Rustic (Tuscan)</td><td>Italy</td>
+            <td>Terracotta roofing, frescos</td>
+            <td>Warm ochre, burnt sienna, sage</td>
+            <td>Marble, wrought iron, plaster</td>
+            <td>Hand-painted majolica</td>
+            <td>Mid–Formal</td>
+          </tr>
+          <tr>
+            <td>Moroccan</td><td>Morocco</td>
+            <td>Zellige mosaic tile, riads</td>
+            <td>Jewel tones: teal, saffron, rose</td>
+            <td>Zellige, plaster (tadelakt), cedar</td>
+            <td>Zellige (geometric mosaic)</td>
+            <td>Ornate–Formal</td>
+          </tr>
+          <tr>
+            <td>French Provençal</td><td>France</td>
+            <td>Lavender palette, toile fabric</td>
+            <td>Lavender, sunflower, dusty rose</td>
+            <td>Stone, linen, aged oak</td>
+            <td>Provençal faïence (soft patterns)</td>
+            <td>Relaxed–Elegant</td>
+          </tr>
+          <tr>
+            <td>Turkish / Ottoman</td><td>Turkey</td>
+            <td>Iznik tile, hammam arches</td>
+            <td>Cobalt, red, turquoise, black</td>
+            <td>Marble, copper, silk</td>
+            <td>Iznik (dense floral repeat)</td>
+            <td>Formal–Opulent</td>
+          </tr>
+          <tr>
+            <td>Coastal Algarvian</td><td>Portugal (sub-style)</td>
+            <td>Chimneys, whitewash, open terraces</td>
+            <td>White, sandy beige, Atlantic blue</td>
+            <td>Limestone, natural fibre</td>
+            <td>Simple encaustic or none</td>
+            <td>Very Relaxed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="no-results" id="comp-table-noresults">No styles match your search.</div>
+  </section>
+
+  <!-- BY ROOM -->
+  <section id="rooms">
+    <div class="section-head">
+      <h2>Room-by-Room Application Guide</h2>
+      <span class="count">6 rooms · must-haves, palette, and quick tips</span>
+    </div>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Room</th>
+            <th>Must-Have Elements</th>
+            <th>Suggested Palette</th>
+            <th>Avoid</th>
+            <th>Quick Win</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Kitchen</td>
+            <td>Azulejo backsplash, terracotta floor, ceramic tableware</td>
+            <td>White + indigo + terracotta</td>
+            <td>High-gloss laminate cabinetry</td>
+            <td>Replace one wall with patterned tile behind the hob</td>
+          </tr>
+          <tr>
+            <td>Living Room</td>
+            <td>Woven rug, textured plaster walls, oversized linen sofa, ceramics</td>
+            <td>Cream + mustard + olive</td>
+            <td>All-dark palette; synthetic upholstery</td>
+            <td>Arraiolos rug on stone or wood floor instantly anchors the space</td>
+          </tr>
+          <tr>
+            <td>Bedroom</td>
+            <td>Embroidered linen, carved headboard, ceramic lamp, whitewash</td>
+            <td>White + sand + terracotta</td>
+            <td>Heavy drapes blocking light</td>
+            <td>Swap pillowcases for embroidered linen immediately</td>
+          </tr>
+          <tr>
+            <td>Bathroom</td>
+            <td>Azulejo tiles (floor or wall), limestone counter, wrought iron fixtures</td>
+            <td>Indigo blue + white + cork</td>
+            <td>Chrome-heavy minimalism</td>
+            <td>Tile one accent wall in blue-and-white azulejo</td>
+          </tr>
+          <tr>
+            <td>Entry / Hall</td>
+            <td>Tiled floor, arched frame, ceramic umbrella stand, coat hooks</td>
+            <td>White + indigo + olive</td>
+            <td>Wall-to-wall carpet</td>
+            <td>Encaustic cement tile runner creates immediate character</td>
+          </tr>
+          <tr>
+            <td>Outdoor / Courtyard</td>
+            <td>Tiled patio, terracotta pots, jasmine or bougainvillea, rattan seating</td>
+            <td>Natural + white + blue</td>
+            <td>Plastic furniture; over-paved without plants</td>
+            <td>A single tiled fountain feature as focal point</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="section-head">
+      <h2>Frequently Asked Questions</h2>
+      <span class="count">8 questions</span>
+    </div>
+    <div id="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What is the single most defining element of Portuguese interior design? <span class="arrow">▼</span></button>
+        <div class="faq-a">Azulejo tilework — specifically the blue-and-white hand-painted ceramic tile tradition dating to the 15th century. Even a single tiled feature wall or staircase makes a space unmistakably Portuguese.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How is it different from Spanish interior design? <span class="arrow">▼</span></button>
+        <div class="faq-a">Portuguese design is generally more restrained and textural. Spain favours bolder, higher-contrast palettes and wrought iron ornamentation. Portuguese interiors lean on craftsmanship and material honesty rather than decorative drama. The tile traditions also differ: azulejo (narrative, painterly) vs. Talavera (colourful, floral repeat).</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Can this style work in a contemporary urban apartment? <span class="arrow">▼</span></button>
+        <div class="faq-a">Yes — and it often works especially well. High ceilings, wood floors, and tiled entryways are common in older Lisbon and Porto apartments and translate naturally to modern layouts. In new builds, use textured plaster, azulejo accents, ceramic lighting, and natural materials to bring the aesthetic without structural changes.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What is the Moorish influence in Portuguese design? <span class="arrow">▼</span></button>
+        <div class="faq-a">Portugal was under Moorish rule from the 8th to 13th centuries, leaving a lasting imprint: horseshoe arches, geometric tile patterns, courtyard layouts, and intricate tracery. These elements appear most clearly in Alentejo and southern Portugal architecture, and subtly in tile motifs throughout the country.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What is cork used for in Portuguese interiors? <span class="arrow">▼</span></button>
+        <div class="faq-a">Portugal produces over 50% of the world's cork. Beyond wine stoppers, cork is used as flooring tiles (warm, quiet, sustainable), wall cladding for thermal and acoustic insulation, and decorative panels. Cork flooring pairs especially well with whitewashed walls and wrought iron fixtures.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What are Arraiolos rugs? <span class="arrow">▼</span></button>
+        <div class="faq-a">Arraiolos is a town in the Alentejo region famous since the 17th century for its hand-embroidered wool rugs, worked in needlepoint on linen. Designs range from geometric to floral to pictorial. They are one of the most recognisable Portuguese textile traditions and are still made in limited artisan quantities today.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How do I use azulejo tiles without overdoing it? <span class="arrow">▼</span></button>
+        <div class="faq-a">Use as a focal point, not a full treatment. One wall in a kitchen, the stair risers, a bathroom accent panel, or a fireplace surround is enough. Balance patterned tile with large areas of plain limewash, neutral plaster, or whitewash to give the tiles room to breathe. Scale down the size of the tile format if in doubt.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What's the difference between coastal Algarvian and traditional Lisbon style? <span class="arrow">▼</span></button>
+        <div class="faq-a">Algarvian style is lighter and more relaxed — whitewashed exteriors, sandy palettes, open terraces, simple encaustic tile or none at all. Lisbon style (particularly Pombalino architecture) is denser: patterned exterior azulejo, high ceilings, restored wood floors, and a more urban density. Both are authentically Portuguese but speak to very different regional vernaculars.</div>
+      </div>
+    </div>
+  </section>
+
+  <div style="margin-top:48px;padding-top:24px;border-top:1px solid var(--rule);font-family:Arial,sans-serif;font-size:12px;color:var(--mid);line-height:1.8;">
+    Data compiled from and expanded on this guide: <a href="https://duduinteriors.com/portuguese-interior-design/" style="color:var(--indigo);">duduinteriors.com/portuguese-interior-design/</a><br>
+    Additional reference: Portuguese National Museum of Tile (Museu Nacional do Azulejo), Lisbon; Portuguese Cork Association (APCOR).
+  </div>
+
+</div><!-- /page -->
+
+<div class="tile-stripe"></div>
+<footer>
+  Portuguese Interior Design — Complete Reference Guide<br>
+  Static reference page · No frameworks · Inline CSS only · GitHub Pages compatible<br>
+  <a href="https://duduinteriors.com/portuguese-interior-design/">Source guide: duduinteriors.com</a>
+</footer>
+
+<script>
+/* ── SORT ─────────────────────────────────────────────────────── */
+function sortTable(tableId, col) {
+  const table = document.getElementById(tableId);
+  const tbody = table.querySelector('tbody');
+  const rows = Array.from(tbody.querySelectorAll('tr'));
+  const th = table.querySelectorAll('thead th')[col];
+  const asc = th.dataset.sort !== 'asc';
+  table.querySelectorAll('thead th').forEach(t => { delete t.dataset.sort; t.querySelector('.sort').textContent = '↕'; });
+  th.dataset.sort = asc ? 'asc' : 'desc';
+  th.querySelector('.sort').textContent = asc ? '↑' : '↓';
+  rows.sort((a, b) => {
+    const av = a.cells[col]?.textContent.trim().toLowerCase() || '';
+    const bv = b.cells[col]?.textContent.trim().toLowerCase() || '';
+    return asc ? av.localeCompare(bv) : bv.localeCompare(av);
+  });
+  rows.forEach(r => tbody.appendChild(r));
+}
+
+/* ── FILTER (category badges) ─────────────────────────────────── */
+function filterTable(tableId, attr, val, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const tbody = document.getElementById(tableId).querySelector('tbody');
+  const rows = tbody.querySelectorAll('tr');
+  let visible = 0;
+  rows.forEach(r => {
+    const match = val === 'all' || r.getAttribute(attr) === val;
+    r.classList.toggle('hidden-row', !match);
+    if (match) visible++;
+  });
+  const nr = document.getElementById(tableId + '-noresults');
+  if (nr) nr.style.display = visible === 0 ? 'block' : 'none';
+}
+
+/* ── SEARCH ───────────────────────────────────────────────────── */
+function searchTable(tableId, query) {
+  const q = query.toLowerCase();
+  const tbody = document.getElementById(tableId).querySelector('tbody');
+  const rows = tbody.querySelectorAll('tr');
+  let visible = 0;
+  rows.forEach(r => {
+    const text = r.textContent.toLowerCase();
+    const match = text.includes(q);
+    r.classList.toggle('hidden-row', !match);
+    if (match) visible++;
+  });
+  const nr = document.getElementById(tableId + '-noresults');
+  if (nr) nr.style.display = visible === 0 ? 'block' : 'none';
+}
+
+/* ── FAQ ──────────────────────────────────────────────────────── */
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = answer.classList.contains('open');
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-q').forEach(b => b.classList.remove('open'));
+  if (!isOpen) { answer.classList.add('open'); btn.classList.add('open'); }
+}
+</script>
+</body>
+</html>
